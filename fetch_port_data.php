@@ -3,7 +3,7 @@
 
 $device=$_GET['id'];
 $portid=$_GET['port'];
-   $qry = "select * from data where deviceid='$device' AND portno='$portid' LIMIT 1 ORDER BY time desc";
+   $qry = "select * from data where deviceid='$device' AND portno='$portid' ORDER BY time DESC LIMIT 1";
    $res = mysqli_query($link, $qry);
 
         $emparr = array();
