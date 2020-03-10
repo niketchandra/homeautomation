@@ -1,0 +1,5 @@
+hardware data includes of
+
+1). hardware id
+2). mac address
+3). ip address
