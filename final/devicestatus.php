@@ -1,8 +1,8 @@
-<?php include('./connect.php'); ?>
+<?php include('connect.php'); ?>
 <?php
 
 $device=$_GET['id'];
-   $qry = "select * from devicestatus where deviceid=001 ORDER BY time DESC LIMIT 1";
+   $qry = "select * from devicestatus where deviceid='$device' ORDER BY time DESC LIMIT 1";
 
    $res = mysqli_query($link, $qry);
 
