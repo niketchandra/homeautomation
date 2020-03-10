@@ -2,7 +2,7 @@
 <?php
 // Create database connection using config file
 include_once("connect.php");
-
+#test2
 // Fetch all users data from database
 $result = mysqli_query($link, "SELECT * FROM data ORDER BY id DESC");
 ?>
