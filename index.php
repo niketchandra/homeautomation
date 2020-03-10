@@ -1,4 +1,4 @@
-
+#test
 <?php
 // Create database connection using config file
 include_once("connect.php");
