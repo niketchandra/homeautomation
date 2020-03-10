@@ -2,14 +2,14 @@
 <?php
 
 $device=$_GET['id'];
-$portid=$_GET['port'];
 $value=$_GET['data'];
-   $sql = "INSERT INTO `portdata`(`deviceid`, `portno`, `data`) VALUES ('$device', '$portid', '$value')";
+   $sql = "INSERT INTO `portdata`(`deviceid`, `status`) VALUES ('$device', '$portid', '$value')";
    if (mysqli_query($link, $sql)) {
-    echo "New record created successfully";
+    echo "record updated";
  } else {
     echo "Error: " . $sql . "" . mysqli_error($conn);
  }
+
  $conn->close();
 
     ?>

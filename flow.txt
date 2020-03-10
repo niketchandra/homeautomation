@@ -1,0 +1,5 @@
+flow
+
+1. Register device (pending)
+2. fetch device status (on/off) --> if off--> update db | if on ---> on task | when it get on --> update db
+2. 

@@ -1,0 +1,13 @@
+Device_Status table
+    fetch the current status of the database and update itself accordingly
+
+
+Device_All_Status table
+    insert only table --> whatever is updatating into "Device_Status" table will insert into this table "NO Update will perform here"
+
+
+"Data" table
+    will save and Update the data according to response get from the hardware
+
+"All Data" table
+    will save the data according to response get from the hardware and whater is update on "DATA" table

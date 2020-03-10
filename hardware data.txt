@@ -3,3 +3,14 @@ hardware data includes of
 1). hardware id
 2). mac address
 3). ip address
+
+.......................................
+        hardware flow
+.......................................
+
+hardware on --> send request to server
+
+in every 2 min (server ping -----> hardware)
+    if on -----> ok
+    if no response --------> db update off
+........................................
