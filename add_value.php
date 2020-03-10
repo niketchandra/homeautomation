@@ -4,7 +4,7 @@
 $device=$_GET['id'];
 $portid=$_GET['port'];
 $value=$_GET['data'];
-   $sql = "INSERT INTO `data`(`deviceid`, `portno`, `data`) VALUES ('$device', '$portid', '$value'";
+   $sql = "INSERT INTO `data`(`deviceid`, `portno`, `data`) VALUES ('$device', '$portid', '$value')";
    if (mysqli_query($link, $sql)) {
     echo "New record created successfully";
  } else {
