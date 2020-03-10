@@ -2,7 +2,7 @@
 <?php
 
 $device=$_GET['id'];
-   $qry = "select * from devicedata where deviceid='$device' ORDER BY time DESC LIMIT 1";
+   $qry = "select * from devicestatus where deviceid=001 ORDER BY time DESC LIMIT 1";
 
    $res = mysqli_query($link, $qry);
 
