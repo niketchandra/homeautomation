@@ -2,14 +2,12 @@
 <?php
 
 $device=$_GET['id'];
-$value=$_GET['data'];
-   $sql = "INSERT INTO `portdata`(`deviceid`, `status`) VALUES ('$device', '$portid', '$value')";
+   $sql = "UPDATE `devicestatus` SET `status`= '0' WHERE `deviceid`= '$device'";
    if (mysqli_query($link, $sql)) {
-    echo "record updated";
+    echo "Device is not available";
  } else {
     echo "Error: " . $sql . "" . mysqli_error($conn);
  }
-
  $conn->close();
 
     ?>
