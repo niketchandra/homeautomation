@@ -1,7 +1,7 @@
 <?php include('connect.php'); ?>
 <?php
 
-$deviceid=$_GET['id'];
+$device=$_GET['id'];
    $qry = "select * from data where deviceid='$device'";
    $res = mysqli_query($link, $qry);
 
