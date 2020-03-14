@@ -7,7 +7,7 @@ $device=$_GET['deviceid'];
 $port=$_GET['pid']
    $sql = "UPDATE `devicestatus` SET `status`= '1' WHERE `deviceid`= '$device' AND 'portno' = '$port';
    if (mysqli_query($link, $sql)) {
-    echo "Device working";
+    echo "port working";
  } else {
     echo "Error: " . $sql . "" . mysqli_error($conn);
  }
