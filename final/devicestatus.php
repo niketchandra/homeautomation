@@ -1,8 +1,9 @@
 <!---------API to chcek the the status of the hardware-------------->
-<?php include('connect.php'); ?>
+<?php include('connect.php');
+$device=$_GET['id']; 
+?>
 <?php
 
-$device=$_GET['id'];
    $qry = "select * from devicestatus where deviceid='$device' ORDER BY time DESC LIMIT 1";
    $res = mysqli_query($link, $qry);
     $emparr = array();
