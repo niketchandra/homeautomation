@@ -1,7 +1,7 @@
 <?php
 define('BROKER', 'localhost');
 define('PORT', 1883);
-define('test', "pubclient_" + getmypid());
+define('CLIENT_ID', "pubclient_" + getmypid());
 
 $client = new Mosquitto\Client(CLIENT_ID);
 $client->onConnect('connect');
