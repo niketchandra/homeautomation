@@ -1,0 +1,13 @@
+var states=["OPEN","CLOSED"];
+var topic =msg.topic;
+var res=topic.split("/");
+var l=res.length;
+var message=msg.payload.toUpperCase();
+if (res[l-1] == "control"){
+    if(message==states[0] || message==states[1]){
+        msg.payload=message;
+        msg.topic=topic.replace("/control","");
+        return msg;
+    }
+}
+return msg;
