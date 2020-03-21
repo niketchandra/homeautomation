@@ -1,5 +1,5 @@
 <?php
-define('BROKER', 'localhost');
+define('test', 'localhost');
 define('PORT', 1883);
 define('CLIENT_ID', "pubclient_" + getmypid());
 
