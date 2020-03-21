@@ -1,0 +1,3 @@
+var val={"payload":msg.payload.value.toString()};
+var dat={"payload":msg.payload.data.toString()};
+return [val,dat];
