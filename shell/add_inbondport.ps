@@ -1,0 +1,3 @@
+$Nsg=Get-AzureRmNetworkSecurityGroup -Name  mqtt-nsg -ResourceGroupName "<ResourceGroupName>"
+$Nsg=Add-AzureRmNetworkSecurityRuleConfig -Name "port_19.00_mqtt" -Description "Allow port 1900" -Access Allow -Protocol * -Direction Inbound -Priority 390 -SourceAddressPrefix "*" -SourcePortRange *  -DestinationAddressPrefix * -DestinationPortRange 1900 -NetworkSecurityGroup $Nsg
+$Nsg | Set-AzureRmNetworkSecurityGroup
