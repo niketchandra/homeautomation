@@ -1,4 +1,5 @@
 <?php
-$output = shell_exec('ls -lart');
+shell_exec('sh register.sh');
+$output = shell_exec('whoami');
 echo "<pre>$output</pre>";
 ?>
