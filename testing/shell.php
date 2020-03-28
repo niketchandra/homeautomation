@@ -1,5 +1,5 @@
 <?php
-shell_exec('sh register.sh');
-$output = shell_exec('whoami');
+$output = shell_exec('ansible-playbook run.yml -vvv');
+#$output = shell_exec('whoami');
 echo "<pre>$output</pre>";
 ?>
