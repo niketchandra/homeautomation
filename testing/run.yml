@@ -1,0 +1,24 @@
+---
+- hosts: 127.0.0.1
+  
+  tasks:
+    - name: fetch id
+      become: True
+      become_user: root
+      uri:
+        url: http://mqtt.southeastasia.cloudapp.azure.com/homeautomation/api/lastid.php
+        method: GET
+        return_content: yes
+      register: id
+
+    ##- name: copy file
+      ##copy:
+        ##src: /home/ubuntu/.node-red/flow2_open.json 
+        ##dest: /home/ubuntu/niket/
+        # owner: 
+        # group: root
+        # mode: '777'
+      ##become: yes
+   
+    - debug:
+        msg: "{{ id }}"
