@@ -9,6 +9,10 @@
 #sudo mkdir test
 #sudo chmod 777 -R test/
 #cd test/
-#sudo history >> his.txt
+#history >> his.txt
 #cat his.txt
-pwd
+#pwd
+
+#mv test.py test/
+#cd test/
+ls
