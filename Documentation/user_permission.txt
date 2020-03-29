@@ -1,0 +1,10 @@
+First we need to provide the password of www-data group
+
+$sudo passwd www-data
+
+then
+
+Add change the secoundry group of the user
+
+$sudo usermod -aG ubuntu www-data
+
