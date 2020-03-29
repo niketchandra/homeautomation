@@ -11,18 +11,15 @@
         method: GET
         return_content: yes
       register: id
-    - name: copy_files
-      shell: "cp /home/ubuntu/.node-red/flows_mqtt.json /var/www/html/homeautomation/newuser/{{ id.json }}/user_{{ id.json }}.json"
-      shell: "cp /home/ubuntu/.node-red/settings.js  /var/www/html/homeautomation/newuser/{{ id.json }}/settings_{{ id.json }}.js"
-#    - name: copy file
-#      copy:
-#        src: /home/ubuntu/.node-red/flows_mqtt.json 
-#        dest: /var/www/html/homeautomation
-#        remote_src: True  
-#    - name: blockinfile
-#      blockinfile:
-#        path: /var/www/html/homeautomation/newuser/{{ id.json }}/user_{{ id.json }}.json
-#        block: [{"id":"ed3573b7.4559b","type":"tab","label":"Flow 1","disabled":false,"info":""},{"id":"a2204612.d4a318","type":"inject","z":"ed3573b7.4559b","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":240,"y":100,"wires":[["657f6b7e.059644"]]},{"id":"657f6b7e.059644","type":"debug","z":"ed3573b7.4559b","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":420,"y":100,"wires":[]}]
+    - name: copy file
+      copy:
+        src: /var/wwww/html/homeautomation/flows_mqtt.json 
+        dest: /var/www/html/homeautomation/newuser/{{ id.json }}/user_{{ id.json }}.json
+        remote_src: True  
+    #- name: blockinfile
+    #  blockinfile:
+    #    path: /var/www/html/homeautomation/newuser/{{ id.json }}/user_{{ id.json }}.json
+    #    block: [{"id":"ed3573b7.4559b","type":"tab","label":"Flow 1","disabled":false,"info":""},{"id":"a2204612.d4a318","type":"inject","z":"ed3573b7.4559b","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":240,"y":100,"wires":[["657f6b7e.059644"]]},{"id":"657f6b7e.059644","type":"debug","z":"ed3573b7.4559b","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":420,"y":100,"wires":[]}]
     
         # owner: 
         # group: root
