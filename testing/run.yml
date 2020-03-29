@@ -3,17 +3,17 @@
   
   tasks:
     - name: fetch id
-      #  become: True
-      #  become_user: root
-      #  become_user_passwd: Niket@786
+      #   become: True
+      #become_user: www-data
+      #become_user_passwd: Niket@786
       uri:
         url: http://mqtt.southeastasia.cloudapp.azure.com/homeautomation/api/lastid.php
         method: GET
         return_content: yes
       register: id
     - name: copy_files
-      shell: "cp /home/ubuntu/.node-red/flows_mqtt.json /var/www/html/homeautomation/newuser/{{ id.json }}/user_{{ id.json }}.json"
-      shell: "cp /home/ubuntu/.node-red/settings.js  /var/www/html/homeautomation/newuser/{{ id.json }}/settings_{{ id.json }}.js"
+      command: "cp /var/www/html/homeautomation/flows_mqtt.json /var/www/html/homeautomation/newuser/{{ id.json }}/user_{{ id.json }}.json"
+      #     shell: "cp /home/ubuntu/.node-red/settings.js  /var/www/html/homeautomation/newuser/{{ id.json }}/settings_{{ id.json }}.js"
 #    - name: copy file
 #      copy:
 #        src: /home/ubuntu/.node-red/flows_mqtt.json 
