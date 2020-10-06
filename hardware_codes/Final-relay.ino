@@ -3,7 +3,7 @@
 
 const char* ssid = "Airtel_7415045756";
 const char* password = "air81485";
-const char* mqtt_server = "192.168.1.10"; 
+const char* mqtt_server = "mqtt-server.southeastasia.cloudapp.azure.com"; 
 
 const int stateMessageEverySec = 5;
 
