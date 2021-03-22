@@ -4,7 +4,7 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'niket');
-define('DB_PASSWORD', 'Admin@365'); #remove password 
+define('DB_PASSWORD', 'Admin@365'); #remove password #Admin@365
 define('DB_NAME', 'rpi');
 
 /* Attempt to connect to MySQL database */
