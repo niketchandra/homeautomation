@@ -27,3 +27,5 @@ Next, we declare the pins of the Nodemcu to which the relay pins are connected a
 // Declare the pins to which the appliances are connected via relays
 int app1 = D1; //appliance 1
 int app2 = D2; //appliance 2`
+  
+  test
